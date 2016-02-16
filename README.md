@@ -34,7 +34,7 @@ supported platforms (Debian, Ubuntu, RHEL, CentOS, Fedora).
 
 ## Requirements
 
-Chef 12 or newer is required.
+Chef 12.1 or newer is required.
 
 ## Attributes
 
@@ -277,9 +277,11 @@ notifications will only be triggered if a package is actually installed.
 
 * `path` – Path to the requirements file, or a folder containing the
   requirements file. *(name property)*
+* `group` – System group to install the packages.
 * `python` – Name of the `python_runtime` resource to use. If not specified, the
   most recently declared `python_runtime` will be used. Can also be set to the
   full path to a `python` binary.
+* `user` – System user to install the packages.
 * `virtualenv` – Name of the `python_virtualenv` resource to use. This is
   mutually exclusive with the `python` property.
 
@@ -395,7 +397,7 @@ The Poise test server infrastructure is sponsored by [Rackspace](https://rackspa
 
 ## License
 
-Copyright 2015, Noah Kantrowitz
+Copyright 2015-2016, Noah Kantrowitz
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

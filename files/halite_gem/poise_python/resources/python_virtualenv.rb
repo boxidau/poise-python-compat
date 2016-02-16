@@ -1,5 +1,5 @@
 #
-# Copyright 2015, Noah Kantrowitz
+# Copyright 2015-2016, Noah Kantrowitz
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -112,7 +112,7 @@ module PoisePython
         private
 
         def install_python
-          return if ::File.exist?(new_resource.path)
+          return if ::File.exist?(python_binary)
 
           cmd = python_shell_out(%w{-m venv -h})
           if cmd.error?
